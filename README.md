@@ -4,6 +4,9 @@ A mobile app with offline games: Hangman and Tic Tac Toe, written in Dart with t
 
 ## Screenshots
 
+### Homescreen
+![Home Screen](assets/images/home_screen.png)
+
 ### Hangman
 ![Hangman Screenshot](assets/images/hangman.png)
 
