@@ -55,7 +55,7 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 20),
-          _buildPointsTable(),
+          _buildPointsBox(),
           _buildGrid(),
           _buildTurn(),
         ],
@@ -63,24 +63,23 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
     );
   }
 
-  Widget _buildPointsTable() {
+  Widget _buildPointsBox() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildPlayerScore('Player X', _scoreX),
+        _buildScore('Player X', _scoreX),
         const SizedBox(width: 40),
-        _buildPlayerScore('Player O', _scoreO),
+        _buildScore('Player O', _scoreO),
       ],
     );
   }
 
-  Widget _buildPlayerScore(String player, int score) {
+  Widget _buildScore(String player, int score) {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
         children: [
-          Text(
-            player,
+          Text(player,
             style: const TextStyle(
               fontSize: 25.0,
               color: Colors.white,
@@ -88,8 +87,7 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
             ),
           ),
           const SizedBox(height: 20),
-          Text(
-            score.toString(),
+          Text(score.toString(),
             style: const TextStyle(
               color: Colors.white,
               fontSize: 25.0,
@@ -280,7 +278,7 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
             children: [
               Text(
                 message,
-                style: TextStyle(color: Colors.white, fontSize: 26),
+                style: const TextStyle(color: Colors.white, fontSize: 26),
               ),
               const SizedBox(height: 30),
               Row(

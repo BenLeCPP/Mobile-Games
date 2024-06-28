@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HangmanHomePage()),
+                  MaterialPageRoute(builder: (context) => const HangmanHomePage()),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -39,7 +39,8 @@ class HomeScreen extends StatelessWidget {
                 child: Image.asset('assets/images/hangman_logo.png',
                     height: 300,
                     width: 310,
-                    fit: BoxFit.cover),
+                    fit: BoxFit.cover
+                ),
               ),
             ),
             const SizedBox(height: 30),
@@ -58,7 +59,8 @@ class HomeScreen extends StatelessWidget {
                 child: Image.asset('assets/images/tic_tac_toe_logo.jpg',
                     height: 300,
                     width: 310,
-                    fit: BoxFit.cover),
+                    fit: BoxFit.cover
+                ),
               ),
             ),
           ],

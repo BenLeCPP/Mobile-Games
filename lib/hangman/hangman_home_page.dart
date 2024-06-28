@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'hangman_game.dart';
 
 class HangmanHomePage extends StatefulWidget {
-  const HangmanHomePage({Key? key}) : super(key: key);
+  const HangmanHomePage({super.key});
 
   @override
   _HangmanHomePageState createState() => _HangmanHomePageState();
@@ -22,7 +22,7 @@ class _HangmanHomePageState extends State<HangmanHomePage> {
     setState(() {
       _game.guessLetter(letter);
       if (_game.hasWon) {
-        _score++; // Increase score on correct guess
+        _score++;
         _showResultDialog('You Win!', _game.selectedWord);
       } else if (_game.hasLost) {
         _showResultDialog('The word is:', _game.selectedWord);
@@ -130,7 +130,7 @@ class _HangmanHomePageState extends State<HangmanHomePage> {
             children: [
               Text(
                 message,
-                style: TextStyle(color: Colors.white, fontSize: 26),
+                style: const TextStyle(color: Colors.white, fontSize: 26),
               ),
               if (correctWord != null && message == 'The word is:')
                 Column(
